@@ -1,0 +1,110 @@
+.sideCol{
+    overflow-y: scroll;
+    height: 100vh;
+    /* width */
+
+    .title{
+        font-size: 17px;
+        padding: 5px;
+    }
+    .hr{
+        width: 100%;
+        height: 1px;
+        background-color: rgba(0,0,0,.05); 
+        margin: 5px 0;
+    }
+    width: 390px;
+    padding-left: 30px;
+     .header{ 
+        overflow: hidden;
+        width: 100%;
+        height: 60px;
+        position: fixed;
+        background-color: #fff;
+        .search{
+            height: 39.6px;
+            padding: 0 5px;
+            border-radius: 20px 0 0 20px;
+            outline: none;
+            border: none;
+            background-color: $serch-input-bg;
+            padding-left: 10px;
+            color: gray;
+            padding-bottom: .5px;
+        }
+    .search-input{
+        outline: none;
+        border: 1px solid transparent;
+        background-color: $serch-input-bg;
+        padding: 10px;
+        width: 100%;
+        max-width: 330px;
+        margin-top: 10px;
+        border-radius:0  20px 20px 0;
+ 
+    }
+}
+    .advance-section{
+        width: 100%;
+        height:auto;
+        background-color: rgba(251, 248, 251, 0.867);
+        margin-top: 60px;
+        padding: 10px ;
+        border-radius: 10px;
+
+        .hr{
+            width: 100%;
+            height: 1px;
+            background-color: rgba(0,0,0,.05); 
+            margin: 5px 0;
+        }
+    }
+    .who-follow{
+        width: 100%;
+        height:auto;
+        background-color: rgba(251, 248, 251, 0.867);
+        margin-top: 10px;
+        padding: 10px ;
+        border-radius: 10px;
+        .user{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .user-info{
+                text-align: center;
+                .userFullName:first-child{
+                    text-transform: capitalize;
+                    display: flex;
+                    align-items: center;
+                    gap: 5px;
+                }
+            }
+            .follow{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding:2px 10px;
+                border: 2px solid $primary-color;
+                color: $primary-color;
+                border-radius: 20px;
+                transition: .2s;
+                &:hover{
+                    background-color: $primary-color;
+                    color: #fff;
+                }
+            }
+        .user-img{
+            img{
+                width: 60px;
+                height: 60px;
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+    }
+}}
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+ 

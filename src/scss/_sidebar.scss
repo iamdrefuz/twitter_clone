@@ -1,0 +1,75 @@
+@import 'components';
+.sidebar{
+    width: 263px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   
+.nav-container{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    height: 100vh;
+    .sidebar-logo{
+        padding: 10px;
+        color: $primary-color;
+        font-size: 26px;
+        margin-left: 5px;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: column;
+        padding-right: 30px;
+        gap: 10px;
+        .navbar-link{
+            font-size: 19px;
+            line-height: 15px;
+            svg{
+                font-size: 24px;
+            }
+        }
+        .navbar-link{
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            width: auto;
+            color: $secondary-color;
+            padding: 10px 13px;
+            transition: .2s;
+            border-radius: 30px;
+
+            &:focus{
+                background-color: $primary-color;
+                width: 100%;
+                color: #fff;
+                transform: scale(1.02);
+            }
+            &:hover{
+                background-color: $primary-color;
+                width: 100%;
+                color: #fff;
+                transform: scale(1.02);
+            }
+           
+        }
+        .active{
+            background-color: $primary-color;
+            width: 100%;
+            color: #fff;
+            transform: scale(1.02);
+           }
+        .tweet{
+            padding: 15px 20px;
+            width: 100%;
+            margin-top: 10px;
+            background-color: $primary-color;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+}
+}

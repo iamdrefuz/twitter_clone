@@ -1,0 +1,144 @@
+.main-content{
+    justify-content: flex-start;
+   
+}
+.user-profile{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid  rgba(0,0,0,.05);
+    .prof_nav{
+        text-transform: capitalize;
+        padding: 20px;
+        width: 600px;
+        margin: 0 auto;
+       transform: translateX(0%);
+       background-color:rgba(255,255,255,.9);
+       height: 60px;
+       backdrop-filter: blur(8px);
+       font-size: 18px;
+       position: fixed;
+       display: flex;
+       align-items: center;
+       gap: 20px;
+       z-index: 99;
+       border-bottom: 1px solid rgba(0,0,0,.05);
+    }
+    .main_section{
+        margin-top: 60px;
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        .user-placeholder{
+            display: flex;
+            flex-direction: column;
+            max-height: 200px;
+            transition: .3s;
+            .placeholder{
+                height: 200px;
+                object-fit:cover;
+                &:hover{
+                    filter: blur(1.2px);
+                }
+            }
+            .user-img{
+                position: relative;
+                top: -72px;
+                left: 20px;
+                max-width: 150px;
+                max-height: 150px;
+                border-radius: 50%;
+                border: 4px solid #fff;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: 1.3s;
+                cursor: pointer;
+               
+               img{
+               width: 140px;
+               height: 140px;
+               object-fit: cover;
+               border-radius: 50%;
+               transition: .2.3s;
+               }
+            }
+            .edit_btn{
+                transform: translateY(-130px);
+                position: relative;
+                left: 82%;
+
+                button{
+                    background-color: transparent;
+                    border: 1px solid rgb(207, 217, 222);
+                    padding: 4px 13px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 20px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    cursor: pointer;
+                    &:hover{
+                        background-color:rgba(220, 219, 220, 0.867) ;
+                    }
+                }
+            }
+        }
+        .user-info{
+            margin-top: 100px;
+            margin-left: 20px;
+            .user-full-name{
+                text-transform: capitalize;
+                font-weight: 500;
+                font-size: 19px;
+                display: flex;
+                align-items: center;
+                gap: 5px;
+            }
+            .bio{
+                margin-top: 10px;
+            }
+            .joined{
+                margin-top: 15px;
+                display: flex;
+                align-items: center ;
+                gap: 4px;
+            }
+            .actives{
+                display: flex;
+                margin-top: 10px;
+                gap: 15px;
+                .follow-link{
+                    display: flex;
+                    gap: 10px;
+                    &:hover{
+                        color: $primary-color;
+                    }
+                }
+            }
+        }
+    }.actions{
+        padding: 0 10px;
+        margin-top: 30px;
+    .actions_btns{
+        display: flex;
+        justify-content: space-between;
+        gap:5px;
+        .actions_btn{
+            width: 100%;   
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;  
+            &:hover{
+                background-color:rgba(220, 219, 220, 0.867);
+            
+            }
+        }
+        .active{
+            border-bottom: 3px solid $primary-color;
+            border-width:10%;
+        }
+    }
+}
+}
