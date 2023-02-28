@@ -29,6 +29,37 @@
                 font-size: 24px;
             }
         }
+        @media(max-width: 840px){
+            .container{
+                padding: 0 10px;
+                margin: 0 auto;
+            }
+           
+            
+            
+        }
+      
+        
+        
+        @media(max-width:1330px){
+            
+            .navbar-link{
+                max-width: 45px;
+                span{
+                    display: none;
+                }
+                .pen-side{
+                    display: flex;
+                }
+                
+            }
+            .navbar{
+                
+                margin: 0;
+                padding: 0;
+            }
+            
+        }
         .navbar-link{
             display: flex;
             gap: 15px;
@@ -60,7 +91,7 @@
             transform: scale(1.02);
            }
         .tweet{
-            padding: 15px 20px;
+            padding: 10px 15px;
             width: 100%;
             margin-top: 10px;
             background-color: $primary-color;
@@ -68,6 +99,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            svg{
+                display: none;
+            }
         }
 
     }

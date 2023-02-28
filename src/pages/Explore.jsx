@@ -12,6 +12,10 @@ const Explore = () => {
     document.querySelector('.inList').classList.remove('active')
     document.querySelector('.inProfile').classList.remove('active')
     document.querySelector('.inMore').classList.remove('active')
+    document.querySelector('.fHome').classList.remove('active')
+        document.querySelector('.fExp').classList.add('active')
+        document.querySelector('.fNoti').classList.remove('active')
+        document.querySelector('.fMess').classList.remove('active')
   })
   return (
     <>

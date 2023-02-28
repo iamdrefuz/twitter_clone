@@ -1,0 +1,47 @@
+export const mytweets =[
+    {
+        id:1,
+        name :'feruzbek',
+        l_name: "jumaboyev",
+        user_img:"https://api.lorem.space/image/face?1",
+        username:'drefuz',
+        confirm:true,
+        content:"My name is feruzbek jumaboyev",
+        media:"https://api.lorem.space/image/house?1",
+        like:'16k',
+        comment:'47',
+        retween:"22",
+        view:"1.2M",
+        share:"203"
+    },
+    {
+        id:2,
+        name :'feruzbek',
+        l_name: "jumaboyev",
+        user_img:"https://api.lorem.space/image/face?1",
+        username:'iamderuz@gmail.com',
+        confirm:true,
+        content:"My name is feruzbek jumaboyev",
+        media:"https://api.lorem.space/image/fashion?2",
+        like:'16k',
+        comment:'47',
+        retween:"22",
+        view:"1.2M",
+        share:"203"
+    },
+    {
+        id:3,
+        name :'feruzbek',
+        l_name: "jumaboyev",
+        user_img:"https://api.lorem.space/image/face?1",
+        username:'marvel',
+        confirm:true,
+        content:"My name is feruzbek jumaboyev",
+        media:"https://api.lorem.space/image/movie?1",
+        like:'16k',
+        comment:'47',
+        retween:"22",
+        view:"1.2M",
+        share:"203"
+    },
+]

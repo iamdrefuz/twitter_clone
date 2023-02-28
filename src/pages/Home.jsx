@@ -23,6 +23,10 @@ const Home = () => {
     document.querySelector('.inList').classList.remove('active')
     document.querySelector('.inProfile').classList.remove('active')
     document.querySelector('.inMore').classList.remove('active')
+    document.querySelector('.fHome').classList.add('active')
+        document.querySelector('.fExp').classList.remove('active')
+        document.querySelector('.fNoti').classList.remove('active')
+        document.querySelector('.fMess').classList.remove('active')
   })
   return (
   <>

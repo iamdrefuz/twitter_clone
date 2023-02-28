@@ -16,10 +16,10 @@ import {RxShare2} from 'react-icons/rx'
           <div className='post-content'>
             <Link to={`/${props.username}`} className='author-fullName'>
            {props.name} {props.l_name} {props.confirm ?  <HiBadgeCheck className='check'/> : ''}
-            <Link  to={`/${props.username}`} >@{props.username}</Link>
+            <Link className='author-username'  to={`/${props.username}`} >@{props.username}</Link>
             </Link>
             <div className='post-title'>{props.content}</div>
-            <div className='post-media'><a href='/'><img src={props.media}/></a></div>
+            <div className='post-media'>{props.media ? <a href='/'><img src={props.media} /> </a> : ''}</div>
             <div className='actions'>
                 <Link to='/' className='comment'><FaRegComment/>{props.comment}</Link>
                 <Link to='/' className='retween'><AiOutlineRetweet/>{props.retween}</Link>

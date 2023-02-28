@@ -17,8 +17,10 @@ import Tweets from './components/Tweets'
 import Replies from './components/Replies'
 import Media from './components/Media'
 import Likes from './components/Likes'
+import Footer from './components/Footer'
 const App = () => {
   return (
+    <>
     <div className='container main-content'>
       <Sidebar/>
       <Routes>
@@ -38,8 +40,10 @@ const App = () => {
          
          <Route path='/more' element={<More/>}/>
       </Routes>
-     
+    
     </div>
+    <Footer/>
+    </>
   )
 }
 

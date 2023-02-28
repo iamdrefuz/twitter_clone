@@ -4,6 +4,8 @@
 @import 'home';
 @import 'post';
 @import 'profile';
+@import 'tweets';
+@import 'footer';
 *{
     margin: 0;
     padding: 0;
@@ -13,7 +15,93 @@
     color: inherit;
 }
 
+@media(max-width:520px){
+    .main-post{
+        .post-content{
+            .author-fullName{
+                font-size: 15px;
+                .author-username{
+                    font-size: 12px;
+                }
+            }
+            .post-title{
+                font-size: 13px;
+            }
+            
+        }
+    }
+}
+@media(max-width:520px){
+    .sidebar{
+        display: none;
+    }
+    .main-navbar{
+        max-width: 100%;
+        border: none;
+        padding: -10px;
+    }
+    
+   
+}
 .main-content{
     display: flex;
     justify-content: space-between;
+}
+
+@media(max-width:1330px){
+    .tweet{
+        svg{
+            display: flex;
+        }
+    }
+    .sidebar{
+        width: 80px;
+    }
+    .main-content{
+        max-width: 1200px;
+        display: flex;
+    }
+    .container{
+        padding: 0 40px;
+    }
+    .sideCol{
+        max-width: 400px;
+    }
+}
+@media(max-width:1240px){
+    .container{
+        max-width: 1100px;
+    }
+    
+}
+@media (max-width:1100px){
+    .main-content{
+        .sideCol{
+            display: none;
+        }
+    }
+
+    .sideCol{
+        display: none;
+        max-width: 0;
+        padding: 0;
+        width: 0;
+        height: 0;
+    }
+    .container{
+        padding: 0 70px;
+
+    }
+   
+}
+@media (max-width:520px){
+    .container{
+        padding: 0 10px;
+    }.footer{
+        display: flex;
+    }
+    .pencil{
+        display: flex;
+    }
+    
 }

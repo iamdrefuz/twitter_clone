@@ -29,9 +29,10 @@ const Profile = () => {
         <div className='main_section'>
           <div className='user-placeholder'>
             <img className='placeholder' src={users[0].plceholder}/>
-            <div className='user-img'><img src={users[0].img}/></div>
+            <div className='img-edit'><div className='user-img'><img src={users[0].img}/></div>
             <div className='edit_btn'>
               <button >Edit profile</button>
+            </div>
             </div>
             
           </div>
