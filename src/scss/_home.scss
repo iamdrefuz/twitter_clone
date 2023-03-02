@@ -35,6 +35,12 @@
         border-right: 0 px solid;
         
     }
+    .header-input{
+        font-size: 15px !important;
+    }
+    .header-input::placeholder{
+        font-size: 15px !important;
+    }
 }
 @media(max-width:720px){
     .container{
@@ -63,7 +69,7 @@
             }
         }
     }
-    .main-navbar{
+      .main-navbar{
        width: 600px;
        transform: translateX(-10px);
        background-color:rgba(255,255,255,.9);
@@ -72,12 +78,26 @@
        font-size: 18px;
        padding: 10px;
        position: fixed;
+       .nav-cont{
+        display: flex;
+        align-items: center;
+        gap: 34%;
+        .logo{
+            color: $primary-color;
+            font-size: 22px;
+            display: none;
+        }
+       }
        .user-img{
         img{
             display: none;
         }
        }
+       
        @media(max-width:520px){
+        .logo{
+            display: flex !important;
+        }
         .navbar-menu{
             padding: 0;
             .navbar-link{

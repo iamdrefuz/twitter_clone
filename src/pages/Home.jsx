@@ -24,15 +24,16 @@ const Home = () => {
     document.querySelector('.inProfile').classList.remove('active')
     document.querySelector('.inMore').classList.remove('active')
     document.querySelector('.fHome').classList.add('active')
-        document.querySelector('.fExp').classList.remove('active')
-        document.querySelector('.fNoti').classList.remove('active')
-        document.querySelector('.fMess').classList.remove('active')
+    document.querySelector('.fExp').classList.remove('active')
+    document.querySelector('.fNoti').classList.remove('active')
+    document.querySelector('.fMess').classList.remove('active')
   })
   return (
   <>
      <div className='home'>
       <Navbar/>
-      <header className='home-header'>
+     <section id='header'>
+     <header className='home-header'>
           <Link to='/' className='header-img'><img src='https://api.lorem.space/image/face?1'/></Link>
           <div className='header-main'>
             <input className='header-input' placeholder='What`s happening ?'/>
@@ -50,6 +51,7 @@ const Home = () => {
           </div>
           
       </header>
+     </section>
       <div className='hr'></div>
       <main className='main-action'>
       {posts.slice(0).reverse().map((item)=>{
@@ -57,7 +59,7 @@ const Home = () => {
       })}
       </main>
    </div>
-   <SideCol/>
+   <SideCol active={true}  side_happen={true}/>
   </>
   )
 }

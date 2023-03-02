@@ -6,6 +6,11 @@
 @import 'profile';
 @import 'tweets';
 @import 'footer';
+@import 'explore';
+.dark{
+    background: #000;
+    color: #fff;
+}
 *{
     margin: 0;
     padding: 0;
@@ -14,6 +19,7 @@
     list-style: none;
     color: inherit;
 }
+
 
 @media(max-width:520px){
     .main-post{
@@ -102,6 +108,5 @@
     }
     .pencil{
         display: flex;
-    }
-    
+    }    
 }

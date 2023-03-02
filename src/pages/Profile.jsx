@@ -8,7 +8,7 @@ import Tweets from '../components/Tweets'
 import {HiBadgeCheck} from 'react-icons/hi'
 const Profile = () => {
     useEffect(()=>{
-        document.title =  'Home / Profile'
+        document.title =  'Profile / Twitter'
         document.querySelector('.inHome').classList.remove('active')
         document.querySelector('.inExplore').classList.remove('active')
         document.querySelector('.inNoti').classList.remove('active')
@@ -64,7 +64,7 @@ const Profile = () => {
 
 </div>
       {/* !!!!! right side bar */}
-      <SideCol/>
+      <SideCol active={true}  side_happen={true}/>
     </>
   )
 }

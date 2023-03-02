@@ -20,7 +20,7 @@ const Notification = () => {
   return (
     <>
       <div>Notification</div>
-      <SideCol/>
+      <SideCol active={true}  side_happen={false}/>
     </>
   )
 }

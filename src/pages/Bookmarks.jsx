@@ -16,7 +16,7 @@ const Bookmarks = () => {
   return (
    <>
    <div>Bookmarks</div>
-    <SideCol/>
+    <SideCol active={true} side_happen={false}/>
    </>
     
   )

@@ -230,8 +230,7 @@
   background-color: #fff;
 }
 .sideCol .header .search {
-  height: 39.6px;
-  padding: 0 5px;
+  min-height: 39px;
   border-radius: 20px 0 0 20px;
   outline: none;
   border: none;
@@ -359,6 +358,18 @@
     max-width: 70%;
     border-right: 0 px solid;
   }
+  .header-input {
+    font-size: 15px !important;
+  }
+  .header-input::-moz-placeholder {
+    font-size: 15px !important;
+  }
+  .header-input:-ms-input-placeholder {
+    font-size: 15px !important;
+  }
+  .header-input::placeholder {
+    font-size: 15px !important;
+  }
 }
 @media (max-width: 720px) {
   .container {
@@ -395,10 +406,23 @@
   padding: 10px;
   position: fixed;
 }
+.home .main-navbar .nav-cont {
+  display: flex;
+  align-items: center;
+  gap: 34%;
+}
+.home .main-navbar .nav-cont .logo {
+  color: #1DA1F2;
+  font-size: 22px;
+  display: none;
+}
 .home .main-navbar .user-img img {
   display: none;
 }
 @media (max-width: 520px) {
+  .home .main-navbar .logo {
+    display: flex !important;
+  }
   .home .main-navbar .navbar-menu {
     padding: 0;
   }
@@ -560,10 +584,13 @@
 
 .main-content {
   justify-content: flex-start;
+  max-height: 100vh;
+  overflow-y: scroll;
 }
 
 .user-profile {
-  height: 100%;
+  max-height: 100vh;
+  overflow-y: scroll;
   max-width: 100%;
   display: flex;
   flex-direction: column;
@@ -589,7 +616,7 @@
 }
 @media (max-width: 1240px) {
   .user-profile .img-edit {
-    gap: 100px !important;
+    gap: 40% !important;
   }
   .user-profile .prof_nav {
     margin: 0;
@@ -618,7 +645,7 @@
   .user-profile .actions {
     gap: 5px;
   }
-  .user-profile .actions .active-content {
+  .user-profile .actions .activ-content {
     max-width: 90%;
   }
 }
@@ -689,6 +716,8 @@
 .user-profile .main_section .user-info {
   margin-top: 100px;
   margin-left: 20px;
+  max-height: 100vh;
+  overflow-y: scroll;
 }
 .user-profile .main_section .user-info .user-full-name {
   text-transform: capitalize;
@@ -743,6 +772,10 @@
   border-bottom: 3px solid #1DA1F2;
   border-width: 10%;
 }
+.user-profile .actions .activ-content {
+  padding-right: 10px;
+  max-width: 600px;
+}
 
 .tweets {
   height: 100vh;
@@ -791,6 +824,206 @@
   background-color: #1DA1F2;
   -webkit-backdrop-filter: blur(8px);
           backdrop-filter: blur(8px);
+}
+
+.container {
+  padding: 0 140px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1450px) {
+  .container {
+    padding: 0 50px;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    padding: 0;
+  }
+}
+.news-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.news-card .news-card_info .card-date {
+  font-size: 12px;
+  color: #5B7083;
+}
+.news-card .news-card_info .card_desc {
+  font-size: 15px;
+}
+.news-card .news-card_info .card_hash {
+  color: #5B7083;
+  font-size: 14px;
+}
+.news-card .news-card_info .card_hash a {
+  color: #1DA1F2;
+}
+.news-card .card-img .card-user-img {
+  border-radius: 15px;
+  width: 70px;
+  height: 70px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.show-more {
+  font-size: 15px;
+  color: #1DA1F2;
+  padding-left: 10px;
+}
+
+.check {
+  color: #1DA1F2;
+}
+
+.explore {
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  max-height: 100vh;
+  overflow-y: scroll;
+  max-width: 600px;
+}
+.explore .search-cont {
+  background-color: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
+  width: 600px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  transform: translate(-20px, 0px);
+  margin-bottom: 20px;
+}
+.explore .search-cont form {
+  padding: 0 15px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+.explore .search-cont form .search-btn {
+  padding: 5px 10px;
+  border-radius: 40px 0 0 40px;
+  border: 1px solid transparent;
+  font-size: 19px;
+  outline: none;
+  min-height: 40px;
+  background-color: #EBEEF0;
+}
+.explore .search-cont form .search-input {
+  font-size: 17px;
+  width: 400px;
+  min-height: 40px;
+  padding: 5px 10px;
+  border-radius: 0px 40px 40px 0px;
+  border: 1px solid transparent;
+  outline: none;
+  background-color: #EBEEF0;
+}
+.explore .ex_main-section {
+  max-width: 100%;
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+.explore .ex_main-section .trend_card {
+  margin: 0 auto;
+  padding: 10px 20px;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+.explore .ex_main-section .trend_card:hover {
+  background-color: rgba(216, 218, 222, 0.212);
+}
+.explore .ex_main-section .trend_card .card-info .ternd-category {
+  font-size: 12px;
+  color: grey;
+}
+.explore .ex_main-section .trend_card .card-info .trending-title {
+  font-size: 10px;
+}
+.explore .ex_main-section .trend_card .card-info .ternding-view {
+  font-size: 12px;
+  color: gray;
+}
+.explore .ex_main-section .trend_card .card-info .more {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.explore .ex_main-section .trend_card .card-info .more:hover {
+  background-color: rgb(181, 191, 188);
+}
+
+@media (max-width: 750px) {
+  .search-cont {
+    transform: translate(-20px, 0px) !important;
+    display: flex;
+    gap: 0px !important;
+    width: 400px !important;
+    justify-content: center !important;
+  }
+  .search-input {
+    width: 250px !important;
+  }
+}
+@media (max-width: 520px) {
+  .search-cont {
+    justify-content: space-between !important;
+    padding: 0 20px;
+    width: 100% !important;
+  }
+  .search-input {
+    width: 100% !important;
+  }
+}
+.overview {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+}
+.overview .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s;
+  background-color: rgba(54, 89, 160, 0.355);
+}
+
+.active {
+  left: 0;
+}
+
+.setting-setion {
+  z-index: 99;
+  width: 600px;
+  height: 80vh;
+  border-radius: 50px;
+  background-color: #fff;
+}
+
+.dark {
+  background: #000;
+  color: #fff;
 }
 
 * {

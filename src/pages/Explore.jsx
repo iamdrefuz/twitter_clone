@@ -1,5 +1,12 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import SideCol from '../components/SideCol'
+import { FiSearch } from 'react-icons/fi'
+import {AiOutlineSetting} from 'react-icons/ai'
+import Explore_trends from '../components/Explore_trends'
+import { trending } from '../data/trending'
+import Post from '../components/Post'
+import { posts } from '../data/posts'
+
 
 const Explore = () => {
   useEffect(()=>{
@@ -16,13 +23,48 @@ const Explore = () => {
         document.querySelector('.fExp').classList.add('active')
         document.querySelector('.fNoti').classList.remove('active')
         document.querySelector('.fMess').classList.remove('active')
-  })
+  },[])
+
+      
+        const [dark , setDark]= useState(false)
+      const [modal,setModal] =useState(false)
+      dark ? document.body.classList.add('dark') : ''
+
   return (
     <>
-      <div>
-        explore
+    
+      <div  className={`overview ${modal? 'active' : ''}`}>
+      <div onClick={()=>setModal(false)}className='background'></div>
+      <div className='setting-setion'>
+        <div className='dark' onClick={()=>{setDark(!dark)}}>dark</div>
+        <div className='dark' onClick={()=> document.body.classList.remove('dark')}>light</div>
       </div>
-      <SideCol/>
+    </div>
+      <div className='explore active'>
+      <div className='search-cont'>
+      <form>
+       <button className='search-btn' onClick={(item)=> item.preventDefault()}>
+        <FiSearch/>
+       </button>
+            <input className='search-input' type='text' placeholder='Search Twitter'/>
+        </form>
+        <div onClick={()=>setModal(!modal)} className='setting'><AiOutlineSetting/></div>
+      </div>
+      <div className='ex_main-section'>
+        {
+          trending.slice(0,5).map((item)=>{
+            return(
+            <Explore_trends id={item.id} category={item.category} title={item.title} view={item.view}/>
+          )})
+        }
+        {
+          posts.slice(0).reverse().map((item)=>{
+           return <Post id = {item.id} name={item.name} l_name={item.l_name} username={item.username} confirm={item.confirm} content={item.content} media={item.media} comment={item.comment} retween={item.retween} like={item.like} view={item.view} shre={item.share} user_img={item.user_img}/>
+          })
+        }
+      </div>
+      </div>
+      <SideCol active={false} side_happen={false}/>
     </>
   )
 }
