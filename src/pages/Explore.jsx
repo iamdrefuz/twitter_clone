@@ -6,7 +6,7 @@ import Explore_trends from '../components/Explore_trends'
 import { trending } from '../data/trending'
 import Post from '../components/Post'
 import { posts } from '../data/posts'
-
+import {BsFillMoonStarsFill, BsSun} from 'react-icons/bs'
 
 const Explore = () => {
   useEffect(()=>{
@@ -20,14 +20,13 @@ const Explore = () => {
     document.querySelector('.inProfile').classList.remove('active')
     document.querySelector('.inMore').classList.remove('active')
     document.querySelector('.fHome').classList.remove('active')
-        document.querySelector('.fExp').classList.add('active')
-        document.querySelector('.fNoti').classList.remove('active')
-        document.querySelector('.fMess').classList.remove('active')
+    document.querySelector('.fExp').classList.add('active')
+    document.querySelector('.fNoti').classList.remove('active')
+    document.querySelector('.fMess').classList.remove('active')
   },[])
 
-      
-        const [dark , setDark]= useState(false)
-      const [modal,setModal] =useState(false)
+      const [dark,setDark] = useState(false)
+      const [modal,setModal] = useState(false)
       dark ? document.body.classList.add('dark') : ''
 
   return (
@@ -35,9 +34,9 @@ const Explore = () => {
     
       <div  className={`overview ${modal? 'active' : ''}`}>
       <div onClick={()=>setModal(false)}className='background'></div>
-      <div className='setting-setion'>
-        <div className='dark' onClick={()=>{setDark(!dark)}}>dark</div>
-        <div className='dark' onClick={()=> document.body.classList.remove('dark')}>light</div>
+      <div className='setting-section'>
+        <div className='dark' onClick={()=>{setDark(!dark)}}>{dark ? <BsSun className='sun'/> : <BsFillMoonStarsFill className='moon'/>} {dark ? document.body.classList.add('dark') : document.body.classList.remove('dark')}{dark? 'light' : 'dark'} mode</div>
+        
       </div>
     </div>
       <div className='explore active'>
@@ -67,6 +66,7 @@ const Explore = () => {
       <SideCol active={false} side_happen={false}/>
     </>
   )
+  
 }
 
 export default Explore

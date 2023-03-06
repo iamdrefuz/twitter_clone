@@ -135,12 +135,29 @@
     left: 0;
 }
 
-.setting-setion{
+.setting-section{
+    padding: 30px;
     z-index: 99;
     width: 600px;
     height: 80vh;
     border-radius: 50px;
     background-color: #fff;
-    
+    .dark{
+        background-color: transparent;
+        color: #000;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        .sun{
+            color: rgba(202, 231, 15, 0.817);
+            font-weight: bold;
+            font-size: 25px;
+        }
+        .moon{
+            color: rgb(15, 101, 138);
+            font-size: 25px;
+        }
+    }
 }
     

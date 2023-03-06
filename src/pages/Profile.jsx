@@ -6,6 +6,7 @@ import { Link, Outlet, Route, Routes } from 'react-router-dom'
 import {IoCalendarOutline} from  'react-icons/io5'
 import Tweets from '../components/Tweets'
 import {HiBadgeCheck} from 'react-icons/hi'
+import { useState } from 'react'
 const Profile = () => {
     useEffect(()=>{
         document.title =  'Profile / Twitter'
@@ -17,27 +18,58 @@ const Profile = () => {
         document.querySelector('.inList').classList.remove('active')
         document.querySelector('.inProfile').classList.add('active')
         document.querySelector('.inMore').classList.remove('active')
-      })
+      },[])
+  
+      const [modal,setModal] =useState(false)
+      const [pic_modal,setPicModal] =useState(false)
+      const [value, setValue] = useState(users[0].name)
+      const [lastname, setLastName] = useState(users[0].l_name)
+
+      const handleChange = event => {
+       setValue(event.target.value)
+       };
+       const lastName = event=>{
+        setLastName(event.target.value)
+       }
   return (
+
     <>
+     <div className={`profile-pic ${pic_modal ? 'active' : ''}`}>
+     <div onClick={()=>setPicModal(false)} className='background'>
+      <div className='img-section'><img onClick={()=> setPicModal} className='img' src={users[0].img}/></div>
+     </div>
+    </div>
+    <div className={`edit-over ${modal ? 'active' : ''}`}>
+    <div onClick={()=>setModal(false)} className='background'></div>
+    <div className='setting-section'>
+   <form>
+   <input   type="text" id="fistname" name="firstname" onChange={handleChange} value={value}/> 
+   <input   type="text" id="lastname" name="lastname" onChange={lastName} value={lastname}/> 
+    <button onClick={(e)=>{
+      setModal(false);
+      e.preventDefault()
+    }}>click</button> 
+   </form>     
+      </div>
+    </div>
       <div className='user-profile'>
       
         <nav className='prof_nav'>
         <Link to='/home'><BiArrowBack/></Link>
-          {users[0].name}
+          {value}
         </nav>
         <div className='main_section'>
           <div className='user-placeholder'>
             <img className='placeholder' src={users[0].plceholder}/>
-            <div className='img-edit'><div className='user-img'><img src={users[0].img}/></div>
+            <div className='img-edit'><div className='user-img' onClick={()=> setPicModal(!pic_modal)}><img src={users[0].img}/></div>
             <div className='edit_btn'>
-              <button >Edit profile</button>
+              <button onClick={()=>setModal(!modal)}>Edit profile</button>
             </div>
             </div>
             
           </div>
           <div className='user-info'>
-              <div className='user-full-name'>{users[0].name} {users[0].l_name} {users[0].confirm ?  <HiBadgeCheck className='check'/> : ''}</div>
+              <div className='user-full-name'>{value} {lastname} {users[0].confirm ?  <HiBadgeCheck className='check'/> : ''}</div>
               <Link to={`/`} className='username'>@{users[0].username}</Link>
               <div className='bio'>{users[0].bio}</div>
               <div className='joined'><IoCalendarOutline/> Joined { users[0].joined}</div>

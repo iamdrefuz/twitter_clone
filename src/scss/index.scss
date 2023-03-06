@@ -10,7 +10,54 @@
 .dark{
     background: #000;
     color: #fff;
+    #root{
+       .footer{
+        background-color: rgb(92 89 89 / 90%);
+       }
+       .main-content{
+       
+        .user-profile{
+            .prof_nav{
+                background-color: rgb(92 89 89 / 90%);
+            }
+        }
+        .sideCol{
+            .header{
+                background-color: #000;
+            }
+            .advance-section{
+                background-color: rgb(92 89 89 / 90%) !important;
+            }
+            .who-follow{
+                background-color: rgb(92 89 89 / 90%);
+            }
+        }
+        .search-cont{
+            background-color: rgb(92 89 89 / 90%);
+            form{
+                .search-btn, .search-input{
+                    background-color: transparent !important;
+                }
+            }
+        }
+        .home{
+            .main-navbar{
+                background-color: rgb(92 89 89 / 90%) !important;
+            }
+        }
+        .sidebar{
+            .nav-container{
+                .navbar{
+                    a{
+                        color: #fff;
+                    }
+                }
+            }
+        }
+       }
+    }
 }
+
 *{
     margin: 0;
     padding: 0;
