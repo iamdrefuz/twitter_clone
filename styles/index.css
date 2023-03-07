@@ -359,10 +359,18 @@
   .home {
     width: 500px;
   }
+  .main-navbar {
+    max-width: 590px;
+  }
+}
+@media (max-width: 1100px) {
+  .main-navbar {
+    max-width: 630px;
+  }
 }
 @media (max-width: 840px) {
   .main-navbar {
-    max-width: 70%;
+    max-width: 600px;
     border-right: 0 px solid;
   }
   .header-input {
@@ -383,7 +391,16 @@
     padding: 0 0px;
   }
   .main-navbar {
-    max-width: 90%;
+    max-width: 500px;
+    transform: translateX(-10px);
+  }
+}
+@media (max-width: 630px) {
+  .main-content {
+    margin: 0 auto !important;
+  }
+  .main-navbar {
+    max-width: 400px;
   }
 }
 .home {
@@ -403,7 +420,7 @@
   }
 }
 .home .main-navbar {
-  width: 600px;
+  width: 630px;
   transform: translateX(-20px);
   background-color: rgba(255, 255, 255, 0.9);
   height: 100px;
@@ -872,7 +889,7 @@
 }
 
 .footer {
-  width: 97%;
+  width: 100%;
   margin: 0 auto;
   padding: 10px 12px;
   position: fixed;
@@ -1114,11 +1131,33 @@
   background: #000;
   color: #fff;
 }
+.dark #root .setting-section {
+  color: #000 !important;
+}
 .dark #root .footer {
   background-color: rgba(92, 89, 89, 0.9);
 }
+.dark #root .main-content .home {
+  border-right: 1px solid rgba(98, 98, 98, 0.9);
+  border-left: 1px solid rgba(98, 98, 98, 0.9);
+}
+.dark #root .main-content .home .main-navbar {
+  background: rgba(5, 5, 5, 0.9) !important;
+}
 .dark #root .main-content .user-profile .prof_nav {
-  background-color: rgba(92, 89, 89, 0.9);
+  background-color: rgba(5, 5, 5, 0.9) !important;
+}
+.dark #root .main-content .sideCol form input {
+  border-top: 1px solid rgba(144, 144, 144, 0.5);
+  border-right: 1px solid rgba(144, 144, 144, 0.5);
+  border-bottom: 1px solid rgba(144, 144, 144, 0.5);
+  background-color: transparent;
+}
+.dark #root .main-content .sideCol form button {
+  border-top: 1px solid rgba(144, 144, 144, 0.5);
+  border-left: 1px solid rgba(144, 144, 144, 0.5);
+  border-bottom: 1px solid rgba(144, 144, 144, 0.5);
+  background-color: transparent;
 }
 .dark #root .main-content .sideCol .header {
   background-color: #000;
